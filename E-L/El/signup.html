@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <title>E-Learning</title>
+  <!----Linking google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+  <!----font-awsome start-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!----font-awsome ends-->
+
+    <!----css file link-->
+  
+
+
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+ 
+  <section>
+    <div class="container">
+      <div class="user signinBx">
+        <div class="imgBx"><img src="https://img.freepik.com/free-vector/digital-presentation-concept-illustration_114360-8175.jpg?w=740&t=st=1682224081~exp=1682224681~hmac=3f0a4893c8263cb9919831ee7a68b9c3e3a44135237e7c04479c5abfa9fca846" alt="" /></div>
+        <div class="formBx">
+          <form method="POST" action="registration.php" >
+            <div class="form-group">
+            <h2>Create an account</h2>
+            <input type="text" name="name" placeholder="Username" />
+            <input type="password" name="password" placeholder="Create Password" id="pwd" />
+            <input type="password" name="confirm_password" placeholder="Confirm Password" id="cpwd" />
+            <input type="email" name="email" placeholder="Email Address" />
+            <div id="errorlabel"></div>
+            <button type="submit" id="btn-login">Sign up</button>
+            <p class="signup">
+              Already have an account ?
+              <a href="login.php" >Sign in.</a>
+            </p>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+$('#cpwd').keyup(function(){
+  var pwd=$('#pwd').val();
+  var cpwd=$('#cpwd').val();
+  if (cpwd!=pwd) 
+  {
+    $('#errorlabel').html('**password are not matched');
+    $('#errorlabel').css('color','red');
+    return false;
+  }
+  else
+  {
+    $('#errorlabel').html('');
+    return true;
+  }
+});
+
+});
+
+  /*const toggleForm = () => {
+  const container = document.querySelector('.container');
+  container.classList.toggle('active');
+};
+</script>
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  background-color:#6dbf70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+section .container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+section .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+section .container .user .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #ff0;
+  transition: 0.5s;
+}
+
+section .container .user .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .container .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+section .container .user .formBx form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+section .container .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+section .container .user .formBx form button[type='submit'] {
+  max-width: 100px;
+  background: #677eff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+
+}
+
+</style>
+</body>
+</html>
